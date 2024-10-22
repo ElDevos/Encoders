@@ -1,29 +1,35 @@
 // pages/ServiceList.js
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 import ServiceCard from '../components/ServiceCard';
-import servicesData from '../data/ServicesData'; // Datos simulados
+import servicesData from '../data/ServicesData'; 
 
 function ServiceList() {
-  const { category } = useParams();
-  const [services, setServices] = useState([]);
+  const { category } = useParams(); // Captura la categoría de la URL
 
-  useEffect(() => {
-    // Filtrar servicios por categoría
-    const filteredServices = servicesData.filter(service => service.category === category);
-    setServices(filteredServices);
-  }, [category]);
+  // Filtra los servicios según la categoría de la URL
+  const filteredServices = servicesData.filter(
+    (service) => service.category === category
+  );
 
   return (
-    <div>
-      <h2>Servicios de {category.charAt(0).toUpperCase() + category.slice(1)}</h2>
+    <div className="service-list-container">
+      <h1>Servicios de {capitalize(category)}</h1>
       <div className="service-list">
-        {services.map(service => (
-          <ServiceCard key={service.id} service={service} />
-        ))}
+        {filteredServices.length > 0 ? (
+          filteredServices.map((service) => (
+            <ServiceCard key={service.id} service={service} />
+          ))
+        ) : (
+          <p>No hay servicios disponibles para esta categoría.</p>
+        )}
       </div>
     </div>
   );
+}
+
+// Función auxiliar para capitalizar el texto
+function capitalize(text) {
+  return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
 export default ServiceList;

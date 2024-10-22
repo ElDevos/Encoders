@@ -1,11 +1,12 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import servicesData from '../data/ServicesData';
-import { useCart } from '../context/CartContext'; // Importa el contexto del carrito
-
+import { useCart } from '../context/CartContext'; // Contexto del carrito
+import '../styles/ServiceDetail.css';
 function ServiceDetail() {
   const { id } = useParams();
-  const { addToCart } = useCart(); // Usa el hook personalizado para acceder al carrito
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
   const [service, setService] = useState(null);
 
   useEffect(() => {
@@ -15,19 +16,25 @@ function ServiceDetail() {
 
   const handleAddToCart = () => {
     if (service) {
-      addToCart(service); // Agrega el servicio al carrito
+      addToCart(service);
       alert(`${service.name} agregado al carrito.`);
+      navigate('/cart');
     }
   };
 
   if (!service) return <p>Cargando...</p>;
 
   return (
-    <div>
-      <h2>{service.name}</h2>
-      <p>{service.description}</p>
-      <p>Precio: ${service.basePrice}</p>
-      <button onClick={handleAddToCart}>Agregar al Carrito</button>
+    <div className="service-detail-container">
+      <img src={service.image} alt={service.name} className="service-image" />
+      <div className="service-info">
+        <h1>{service.name}</h1>
+        <p>{service.description}</p>
+        <h2>Precio: <span>${service.basePrice}</span></h2>
+        <button className="add-to-cart-button" onClick={handleAddToCart}>
+          Agregar al Carrito
+        </button>
+      </div>
     </div>
   );
 }

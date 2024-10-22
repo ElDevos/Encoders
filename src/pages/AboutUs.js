@@ -1,33 +1,37 @@
-import './AboutUs.css'; // Importaremos estilos personalizados
+import './AboutUs.css'; // Estilos personalizados
 
 function AboutUs() {
   const authors = [
     {
-      name: 'Juan Pérez',
-      career: 'Ingeniero en Sistemas',
-      age: 25,
-      hobby: 'Desarrollar videojuegos',
-      image: 'https://via.placeholder.com/150', // Imagen de ejemplo
-    },
-    {
-      name: 'Ana Gómez',
-      career: 'Diseñadora UX/UI',
-      age: 24,
-      hobby: 'Fotografía y arte digital',
-      image: 'https://via.placeholder.com/150', // Imagen de ejemplo
-    },
-    {
-      name: 'Carlos López',
+      name: 'David Zhang',
       career: 'Ingeniero en Software',
-      age: 26,
+      age: 21,
+      hobby: 'Ver eSport',
+      image: process.env.PUBLIC_URL + '/images/David.jpeg', // Imagen local
+    },
+    {
+      name: 'José Herazo',
+      career: 'Ingeniero de Software',
+      age: 22,
+      hobby: 'Fotografía y arte digital',
+      image: 'https://via.placeholder.com/150',
+    },
+    {
+      name: 'Eduardo Maestre',
+      career: 'Ingeniero en Software',
+      age: 23,
       hobby: 'Ciclismo y leer libros de ciencia ficción',
-      image: 'https://via.placeholder.com/150', // Imagen de ejemplo
+      image: 'https://via.placeholder.com/150',
     },
   ];
 
   return (
     <div className="about-us-container">
-      <h2>Sobre Nosotros</h2>
+      <h2>Conócenos</h2>
+      <p className="intro-text">
+        Somos un equipo apasionado por el desarrollo de software. Nos dedicamos a crear soluciones tecnológicas 
+        innovadoras para impulsar el crecimiento de empresas agrícolas.
+      </p>
       <div className="authors">
         {authors.map((author, index) => (
           <div key={index} className="author-card">

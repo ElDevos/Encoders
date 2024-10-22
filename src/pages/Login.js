@@ -1,47 +1,51 @@
 import { useState } from 'react';
-import { useAuth } from '../context/AuthContext'; // Importamos el contexto de autenticación
-import { useNavigate } from 'react-router-dom';
-
+import { useAuth } from '../context/AuthContext';
+import { useNavigate, Link } from 'react-router-dom'; // Importa Link
+import '../styles/Login.css';
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { login } = useAuth(); // Obtenemos la función de login
+  const { login } = useAuth(); // Hook de autenticación
   const navigate = useNavigate();
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    login(); // Iniciamos sesión
-    navigate('/'); // Redirigimos a la página principal
+    try {
+      await login(email, password);
+      navigate('/'); // Redirige al inicio después de iniciar sesión
+    } catch (err) {
+      setError('Correo o contraseña incorrectos');
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit} style={formStyle}>
+    <div className="login-container">
       <h2>Iniciar Sesión</h2>
-      <input
-        type="email"
-        placeholder="Correo"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
-      <input
-        type="password"
-        placeholder="Contraseña"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
-      <button type="submit">Ingresar</button>
-    </form>
+      {error && <p className="error-message">{error}</p>}
+      <form onSubmit={handleSubmit} className="login-form">
+        <input
+          type="email"
+          placeholder="Correo"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Contraseña"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <button type="submit">Ingresar</button>
+      </form>
+      <div className="register-link">
+        <p>¿No tienes una cuenta?</p>
+        <Link to="/register">Regístrate aquí</Link>
+      </div>
+    </div>
   );
 }
-
-const formStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-  width: '300px',
-  margin: '0 auto',
-  gap: '10px',
-};
 
 export default Login;

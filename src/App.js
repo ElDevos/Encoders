@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import { CartProvider } from './context/CartContext';
 import { AuthProvider } from './context/AuthContext';
 
+
 function App() {
   return (
     <AuthProvider>
@@ -36,3 +37,4 @@ function App() {
 }
 
 export default App;
+

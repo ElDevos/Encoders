@@ -1,0 +1,111 @@
+/* Contenedor del carrito */
+.cart-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Mensaje de carrito vacío */
+  .empty-cart-message {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    color: #777;
+  }
+  
+  /* Estilo de cada elemento del carrito */
+  .cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  /* Imagen del producto */
+  .cart-item-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Detalles del producto */
+  .cart-item-details {
+    flex: 1;
+  }
+  
+  /* Controles de cantidad */
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .quantity-controls button {
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .quantity-controls button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Subtotal de cada producto */
+  .subtotal {
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  /* Botón de eliminar */
+  .remove-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .remove-button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Resumen del carrito */
+  .cart-summary {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .cart-summary h3 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Botón de pago */
+  .checkout-button {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .checkout-button:hover {
+    background-color: #1e8449;
+  }
+  
