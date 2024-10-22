@@ -6,7 +6,7 @@ import ServiceList from './pages/ServiceList';
 import ServiceDetail from './pages/ServiceDetail';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
-import AboutUs from './pages/AboutUs'; // Importamos AboutUs
+import AboutUs from './pages/AboutUs';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { CartProvider } from './context/CartContext';
@@ -16,7 +16,7 @@ function App() {
   return (
     <AuthProvider>
       <CartProvider>
-        <Router>
+        <Router basename="/Encoders"> {/* Agrega el basename */}
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -26,7 +26,7 @@ function App() {
             <Route path="/service/:id" element={<ServiceDetail />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
-            <Route path="/about" element={<AboutUs />} /> {/* Ruta de "Sobre Nosotros" */}
+            <Route path="/about" element={<AboutUs />} />
           </Routes>
           <Footer />
         </Router>
