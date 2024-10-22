@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Encoders.git/static/css/main.9ce5e189.css",
-    "main.js": "/Encoders.git/static/js/main.7dafcf1e.js",
-    "index.html": "/Encoders.git/index.html",
-    "main.9ce5e189.css.map": "/Encoders.git/static/css/main.9ce5e189.css.map",
-    "main.7dafcf1e.js.map": "/Encoders.git/static/js/main.7dafcf1e.js.map"
+    "main.css": "/Encoders/static/css/main.9ce5e189.css",
+    "main.js": "/Encoders/static/js/main.f75076e1.js",
+    "index.html": "/Encoders/index.html",
+    "main.9ce5e189.css.map": "/Encoders/static/css/main.9ce5e189.css.map",
+    "main.f75076e1.js.map": "/Encoders/static/js/main.f75076e1.js.map"
   },
   "entrypoints": [
     "static/css/main.9ce5e189.css",
-    "static/js/main.7dafcf1e.js"
+    "static/js/main.f75076e1.js"
   ]
 }
