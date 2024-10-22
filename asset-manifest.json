@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Encoders.git/static/css/main.9ce5e189.css",
+    "main.js": "/Encoders.git/static/js/main.7dafcf1e.js",
+    "index.html": "/Encoders.git/index.html",
+    "main.9ce5e189.css.map": "/Encoders.git/static/css/main.9ce5e189.css.map",
+    "main.7dafcf1e.js.map": "/Encoders.git/static/js/main.7dafcf1e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ce5e189.css",
+    "static/js/main.7dafcf1e.js"
+  ]
+}
