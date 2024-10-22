@@ -14,14 +14,14 @@ function AboutUs() {
       career: 'Ingeniero de Software',
       age: 22,
       hobby: 'Fotografía y arte digital',
-      image: 'https://via.placeholder.com/150',
+      image: process.env.PUBLIC_URL + '/images/Jose.jpeg',
     },
     {
       name: 'Eduardo Maestre',
       career: 'Ingeniero en Software',
       age: 23,
       hobby: 'Ciclismo y leer libros de ciencia ficción',
-      image: 'https://via.placeholder.com/150',
+      image: process.env.PUBLIC_URL + '/images/Eduardo.jpeg',
     },
   ];
 
