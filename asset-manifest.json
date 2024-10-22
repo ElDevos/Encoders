@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Encoders/static/css/main.ad2f29a1.css",
-    "main.js": "/Encoders/static/js/main.0a98be42.js",
+    "main.js": "/Encoders/static/js/main.948ce52b.js",
     "static/media/punta.jpg": "/Encoders/static/media/punta.151a13fe8967a008d7af.jpg",
     "static/media/agriculturaM.jpeg": "/Encoders/static/media/agriculturaM.dc4d24c2bb81ce1a05c8.jpeg",
     "static/media/asesores.webp": "/Encoders/static/media/asesores.6a3dd8b338866dd4744a.webp",
     "index.html": "/Encoders/index.html",
     "main.ad2f29a1.css.map": "/Encoders/static/css/main.ad2f29a1.css.map",
-    "main.0a98be42.js.map": "/Encoders/static/js/main.0a98be42.js.map"
+    "main.948ce52b.js.map": "/Encoders/static/js/main.948ce52b.js.map"
   },
   "entrypoints": [
     "static/css/main.ad2f29a1.css",
-    "static/js/main.0a98be42.js"
+    "static/js/main.948ce52b.js"
   ]
 }
